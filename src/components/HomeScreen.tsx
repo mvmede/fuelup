@@ -121,7 +121,7 @@ export default function HomeScreen({ onStationSelect }: HomeScreenProps) {
   const [selectedMapStation, setSelectedMapStation] = useState<Station>(mockStations[0]);
 
   return (
-    <div className="h-screen bg-[#0B1B2B] flex flex-col pb-20">
+    <div className="h-screen bg-[#0e0e0e] flex flex-col pb-20">
       {/* Search Bar */}
       <div className="p-4 space-y-4">
         <div className="relative">
@@ -145,13 +145,13 @@ export default function HomeScreen({ onStationSelect }: HomeScreenProps) {
       {/* Map Area */}
       <div className="flex-1 relative bg-[#1a2838] mx-4 rounded-3xl overflow-hidden">
         {/* Mock Map with Markers */}
-        <div className="absolute inset-0 bg-gradient-to-br from-[#1a2838] to-[#0B1B2B]">
+        <div className="absolute inset-0 bg-gradient-to-br from-[#0e0e0e] to-[#0e0e0e]">
           {/* Grid pattern to simulate map */}
           <div className="absolute inset-0 opacity-10" style={{
             backgroundImage: 'linear-gradient(#FF6B00 1px, transparent 1px), linear-gradient(90deg, #FF6B00 1px, transparent 1px)',
             backgroundSize: '50px 50px'
           }} />
-          
+
           {/* Mock markers */}
           {mockStations.map((station, index) => (
             <motion.button
@@ -163,11 +163,10 @@ export default function HomeScreen({ onStationSelect }: HomeScreenProps) {
                 setSelectedMapStation(station);
                 onStationSelect(station);
               }}
-              className={`absolute ${
-                station.id === selectedMapStation.id
-                  ? 'bg-[#FF6B00] scale-110'
-                  : 'bg-white/90'
-              } rounded-full p-3 shadow-lg transition-all hover:scale-110`}
+              className={`absolute ${station.id === selectedMapStation.id
+                ? 'bg-[#FF6B00] scale-110'
+                : 'bg-white/90'
+                } rounded-full p-3 shadow-lg transition-all hover:scale-110`}
               style={{
                 left: `${20 + index * 20}%`,
                 top: `${30 + (index % 2) * 20}%`
@@ -180,7 +179,7 @@ export default function HomeScreen({ onStationSelect }: HomeScreenProps) {
                   animate={{ scale: 1 }}
                   className="absolute -top-12 left-1/2 -translate-x-1/2 bg-white px-3 py-1 rounded-lg shadow-lg whitespace-nowrap"
                 >
-                  <div className="text-xs text-[#0B1B2B]">${station.price}</div>
+                  <div className="text-xs text-[#0e0e0e]">${station.price}</div>
                 </motion.div>
               )}
             </motion.button>
@@ -189,7 +188,7 @@ export default function HomeScreen({ onStationSelect }: HomeScreenProps) {
 
         {/* My Location Button */}
         <button className="absolute bottom-4 right-4 bg-white p-4 rounded-full shadow-xl hover:bg-gray-100 transition-colors">
-          <Navigation className="w-5 h-5 text-[#0B1B2B]" fill="currentColor" />
+          <Navigation className="w-5 h-5 text-[#0e0e0e]" fill="currentColor" />
         </button>
       </div>
 

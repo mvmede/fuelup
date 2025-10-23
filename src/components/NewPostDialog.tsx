@@ -28,7 +28,7 @@ export default function NewPostDialog({ isOpen, onClose, onSubmit }: NewPostDial
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="bg-[#0B1B2B] border-white/20 text-white max-w-md">
+      <DialogContent className="bg-[#0e0e0e] border-white/20 text-white max-w-md">
         <DialogHeader>
           <DialogTitle className="text-white text-2xl">Create Post</DialogTitle>
         </DialogHeader>

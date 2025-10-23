@@ -105,7 +105,7 @@ function App() {
   const showNavBar = ['home', 'community', 'profile'].includes(currentScreen);
 
   return (
-    <div className={`min-h-screen ${isDarkMode ? 'bg-[#0B1B2B]' : 'bg-white'}`}>
+    <div className={`min-h-screen ${isDarkMode ? 'bg-[#0e0e0e]' : 'bg-white'}`}>
       <div className="max-w-md mx-auto relative min-h-screen">
         {renderScreen()}
         {showNavBar && (

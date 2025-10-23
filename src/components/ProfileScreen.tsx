@@ -11,7 +11,7 @@ interface ProfileScreenProps {
 
 export default function ProfileScreen({ isDarkMode, onToggleDarkMode, onLogout }: ProfileScreenProps) {
   return (
-    <div className="min-h-screen bg-[#0B1B2B] pb-24">
+    <div className="min-h-screen bg-[#0e0e0e] pb-24">
       {/* Header */}
       <div className="px-6 py-8">
         <h1 className="text-white text-3xl mb-8">Perfil</h1>
@@ -24,7 +24,7 @@ export default function ProfileScreen({ isDarkMode, onToggleDarkMode, onLogout }
         >
           <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -mr-16 -mt-16" />
           <div className="absolute bottom-0 left-0 w-24 h-24 bg-white/10 rounded-full -ml-12 -mb-12" />
-          
+
           <div className="relative flex items-center gap-4">
             <div className="w-20 h-20 bg-white rounded-full flex items-center justify-center text-4xl">
               😊

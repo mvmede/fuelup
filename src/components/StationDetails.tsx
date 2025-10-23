@@ -16,7 +16,7 @@ export default function StationDetails({ station, onBack }: StationDetailsProps)
   const [activeTab, setActiveTab] = useState('prices');
 
   return (
-    <div className="min-h-screen bg-[#0B1B2B] pb-8">
+    <div className="min-h-screen bg-[#0e0e0e] pb-8">
       {/* Header */}
       <div className="relative bg-gradient-to-b from-[#FF6B00] to-[#FF8C00] rounded-b-3xl pb-8">
         <button
@@ -44,7 +44,7 @@ export default function StationDetails({ station, onBack }: StationDetailsProps)
         >
           <div className="text-center">
             <div className="text-gray-500 text-sm mb-1">Comum</div>
-            <div className="text-4xl text-[#0B1B2B]">R$ {station.price}</div>
+            <div className="text-4xl text-[#0e0e0e]">R$ {station.price}</div>
             <div className="text-gray-500 text-sm">/litro</div>
           </div>
         </motion.div>
@@ -56,11 +56,10 @@ export default function StationDetails({ station, onBack }: StationDetailsProps)
           {[...Array(5)].map((_, i) => (
             <Star
               key={i}
-              className={`w-5 h-5 ${
-                i < Math.floor(station.rating)
+              className={`w-5 h-5 ${i < Math.floor(station.rating)
                   ? 'text-[#FF6B00] fill-[#FF6B00]'
                   : 'text-gray-600'
-              }`}
+                }`}
             />
           ))}
           <span className="text-white ml-2">

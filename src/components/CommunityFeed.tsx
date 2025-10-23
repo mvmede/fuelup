@@ -69,7 +69,7 @@ export default function CommunityFeed() {
   const [isNewPostOpen, setIsNewPostOpen] = useState(false);
 
   const handleLike = (postId: string) => {
-    setPosts(posts.map(post => 
+    setPosts(posts.map(post =>
       post.id === postId
         ? { ...post, isLiked: !post.isLiked, likes: post.isLiked ? post.likes - 1 : post.likes + 1 }
         : post
@@ -92,9 +92,9 @@ export default function CommunityFeed() {
   };
 
   return (
-    <div className="min-h-screen bg-[#0B1B2B] pb-24">
+    <div className="min-h-screen bg-[#0e0e0e] pb-24">
       {/* Header */}
-      <div className="sticky top-0 bg-[#0B1B2B]/95 backdrop-blur-sm z-10 px-6 py-6 border-b border-white/10">
+      <div className="sticky top-0 bg-[#0e0e0e]/95 backdrop-blur-sm z-10 px-6 py-6 border-b border-white/10">
         <h1 className="text-white text-3xl">Comunidade</h1>
         <p className="text-white/60 mt-1">Conecte-se com outros motoristas</p>
       </div>

@@ -47,7 +47,7 @@ export default function OnboardingScreen({ onComplete }: OnboardingScreenProps) 
   };
 
   return (
-    <div className="h-screen bg-[#0B1B2B] flex flex-col">
+    <div className="h-screen bg-[#0e0e0e] flex flex-col">
       {/* Skip button */}
       <div className="flex justify-end p-6">
         <button
@@ -74,11 +74,11 @@ export default function OnboardingScreen({ onComplete }: OnboardingScreenProps) 
                 {slides[currentSlide].icon}
               </div>
             </div>
-            
+
             <h2 className="text-white text-3xl mb-4 px-4">
               {slides[currentSlide].title}
             </h2>
-            
+
             <p className="text-white/70 text-lg px-4">
               {slides[currentSlide].description}
             </p>
@@ -91,11 +91,10 @@ export default function OnboardingScreen({ onComplete }: OnboardingScreenProps) 
         {slides.map((_, index) => (
           <div
             key={index}
-            className={`h-2 rounded-full transition-all duration-300 ${
-              index === currentSlide
-                ? 'w-8 bg-[#FF6B00]'
-                : 'w-2 bg-white/30'
-            }`}
+            className={`h-2 rounded-full transition-all duration-300 ${index === currentSlide
+              ? 'w-8 bg-[#FF6B00]'
+              : 'w-2 bg-white/30'
+              }`}
           />
         ))}
       </div>

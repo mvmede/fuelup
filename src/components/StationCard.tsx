@@ -20,18 +20,17 @@ export default function StationCard({ station, onClick }: StationCardProps) {
 
         {/* Station Info */}
         <div className="flex-1 text-left">
-          <h3 className="text-[#0B1B2B] text-xl mb-1">{station.name}</h3>
-          
+          <h3 className="text-[#0e0e0e] text-xl mb-1">{station.name}</h3>
+
           {/* Rating */}
           <div className="flex items-center gap-1 mb-2">
             {[...Array(5)].map((_, i) => (
               <Star
                 key={i}
-                className={`w-4 h-4 ${
-                  i < Math.floor(station.rating)
+                className={`w-4 h-4 ${i < Math.floor(station.rating)
                     ? 'text-[#FF6B00] fill-[#FF6B00]'
                     : 'text-gray-300'
-                }`}
+                  }`}
               />
             ))}
             <span className="text-gray-600 text-sm ml-1">{station.rating}</span>

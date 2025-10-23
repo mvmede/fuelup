@@ -17,13 +17,13 @@ export default function NavigationBar({ currentScreen, onNavigate, isDarkMode }:
   ];
 
   return (
-    <div className={`fixed bottom-0 left-0 right-0 ${isDarkMode ? 'bg-[#0B1B2B]' : 'bg-white'} border-t ${isDarkMode ? 'border-white/10' : 'border-gray-200'} z-50`}>
+    <div className={`fixed bottom-0 left-0 right-0 ${isDarkMode ? 'bg-[#0e0e0e]' : 'bg-white'} border-t ${isDarkMode ? 'border-white/10' : 'border-gray-200'} z-50`}>
       <div className="max-w-md mx-auto px-4">
         <nav className="flex items-center justify-around py-3">
           {navItems.map((item) => {
             const Icon = item.icon;
             const isActive = currentScreen === item.id;
-            
+
             return (
               <button
                 key={item.id}
@@ -38,23 +38,21 @@ export default function NavigationBar({ currentScreen, onNavigate, isDarkMode }:
                   />
                 )}
                 <Icon
-                  className={`w-6 h-6 transition-colors relative z-10 ${
-                    isActive
+                  className={`w-6 h-6 transition-colors relative z-10 ${isActive
                       ? 'text-[#FF6B00]'
                       : isDarkMode
-                      ? 'text-white/60'
-                      : 'text-gray-400'
-                  }`}
+                        ? 'text-white/60'
+                        : 'text-gray-400'
+                    }`}
                   fill={isActive ? 'currentColor' : 'none'}
                 />
                 <span
-                  className={`text-xs relative z-10 ${
-                    isActive
+                  className={`text-xs relative z-10 ${isActive
                       ? 'text-[#FF6B00]'
                       : isDarkMode
-                      ? 'text-white/60'
-                      : 'text-gray-400'
-                  }`}
+                        ? 'text-white/60'
+                        : 'text-gray-400'
+                    }`}
                 >
                   {item.label}
                 </span>
